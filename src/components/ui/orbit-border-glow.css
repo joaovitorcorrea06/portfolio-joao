@@ -1,0 +1,51 @@
+.orbit-border-glow {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.orbit-border-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background:
+    conic-gradient(
+      from var(--orbit-angle, 0deg),
+      transparent 0deg,
+      transparent 110deg,
+      rgba(var(--orbit-glow-rgb, 138, 5, 190), 0.95) 155deg,
+      rgba(var(--orbit-glow-rgb, 138, 5, 190), 0.35) 188deg,
+      transparent 225deg,
+      transparent 360deg
+    );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: orbit-border-spin var(--orbit-duration, 5.5s) linear infinite;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.orbit-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(var(--orbit-glow-rgb, 138, 5, 190), 0.12), transparent 36%);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@keyframes orbit-border-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

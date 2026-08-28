@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Satoshi", "Clash Display", "Avenir Next", sans-serif;
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+
+  --color-background: #090311;
+  --color-foreground: #f8f1ff;
+
+  --color-primary-50: #faf5ff;
+  --color-primary-100: #f3e4ff;
+  --color-primary-200: #e7c8ff;
+  --color-primary-300: #d39cfb;
+  --color-primary-400: #bf6df5;
+  --color-primary-500: #8a05be;
+  --color-primary-600: #6e039c;
+  --color-primary-700: #56067a;
+  --color-primary-800: #3f085b;
+  --color-primary-900: #250433;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background:
+    radial-gradient(circle at top, rgba(138, 5, 190, 0.18), transparent 30%),
+    linear-gradient(180deg, #14051e 0%, #090311 56%, #050109 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
