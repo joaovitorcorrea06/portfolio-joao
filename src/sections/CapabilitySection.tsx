@@ -42,18 +42,20 @@ export function CapabilitySection() {
           <div className="relative z-10 grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
             <div>
               <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-primary-200">
-                Capability stack
+                Competências técnicas
               </span>
               <h2 className="mt-6 font-display text-4xl leading-[1.02] tracking-[-0.05em] text-white sm:text-5xl">
-                Capacidade técnica apresentada com presença, movimento e estrutura.
+                Competências apresentadas com contexto real de entrega.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-primary-100/75 md:text-lg">
-                A section agora assume mais atmosfera visual: fundo vivo, cards com glow contínuo e leitura mais premium para stack, motion, landing pages e camadas interativas.
+                Aqui a stack aparece do jeito certo: React.js, TypeScript,
+                Tailwind CSS, integrações REST, formulários, testes e
+                manutenção de sistemas web em produção.
               </p>
 
               <div className="mt-8 flex justify-start">
                 <SplitFlapText
-                  words={['CONVERT', 'MOTION', 'SYSTEMS', 'WEBGL']}
+                  words={['REACT', 'APIS', 'TESTES', 'BUILD']}
                   flipDuration={0.08}
                   stagger={0.03}
                   cycleDelay={1700}
@@ -70,16 +72,16 @@ export function CapabilitySection() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <span className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-primary-100/74">
-                  React
+                  React.js
                 </span>
                 <span className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-primary-100/74">
-                  GSAP
+                  TypeScript
                 </span>
                 <span className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-primary-100/74">
-                  Three.js
+                  Tailwind CSS
                 </span>
                 <span className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-primary-100/74">
-                  Motion systems
+                  Vitest
                 </span>
               </div>
             </div>

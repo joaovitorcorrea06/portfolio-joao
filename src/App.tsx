@@ -6,7 +6,6 @@ import { CapabilitySection } from '@/sections/CapabilitySection';
 import { FinalCtaSection } from '@/sections/FinalCtaSection';
 import { CursorGlow } from '@/components/ui/cursor-glow';
 import { GridMotionBackground } from '@/components/ui/grid-motion-background';
-import { SectionLoopDivider } from '@/components/ui/section-loop-divider';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
       <main className="relative z-10 min-h-screen bg-transparent text-foreground">
         <HeroSection />
         <SelectedWorkSection />
-        {/* <SectionLoopDivider /> */}
         <ProcessSection />
         <ShowcaseSection />
         <CapabilitySection />

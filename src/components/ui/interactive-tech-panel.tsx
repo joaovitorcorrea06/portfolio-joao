@@ -3,10 +3,10 @@ import { gsap } from 'gsap';
 import * as THREE from 'three';
 
 const techBadges = [
-  { label: 'GSAP', className: 'left-[10%] top-[14%]' },
-  { label: 'THREE.JS', className: 'right-[8%] top-[18%]' },
-  { label: 'SCROLL', className: 'left-[18%] bottom-[16%]' },
-  { label: 'WEBGL', className: 'right-[14%] bottom-[20%]' },
+  { label: 'REACT', className: 'left-[10%] top-[14%]' },
+  { label: 'TYPESCRIPT', className: 'right-[8%] top-[18%]' },
+  { label: 'APIS', className: 'left-[18%] bottom-[16%]' },
+  { label: 'VITEST', className: 'right-[14%] bottom-[20%]' },
 ];
 
 export function InteractiveTechPanel() {

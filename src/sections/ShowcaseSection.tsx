@@ -9,16 +9,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const detailCards = [
   {
-    label: 'GSAP ScrollTrigger',
-    text: 'Move o mockup, revela os cards técnicos e sincroniza a leitura com o scroll sem forçar scroll-jacking.',
+    label: 'Interfaces responsivas',
+    text: 'Desenvolvimento de telas com React.js e Tailwind CSS, incluindo migração de layouts legados para componentes modernos.',
   },
   {
-    label: 'Three.js scene',
-    text: 'Renderiza uma cena 3D viva dentro da tela, com resposta ao mouse e profundidade suficiente para virar assinatura visual.',
+    label: 'Integração com APIs REST',
+    text: 'Consumo de dados com organização de estado assíncrono e suporte a fluxos administrativos reais no sistema.',
   },
   {
-    label: 'Portfolio signal',
-    text: 'Mostra ao cliente que você não apenas aplica efeito; você consegue integrar interação, estética e performance em uma seção comercial.',
+    label: 'Testes e evolução contínua',
+    text: 'Aplicação de Vitest, correção de bugs e ajustes pontuais para sustentar estabilidade e crescimento do produto.',
   },
 ];
 
@@ -91,15 +91,15 @@ export function ShowcaseSection() {
         <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-center lg:gap-16">
           <div>
             <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-primary-200">
-              GSAP + Three.js
+              React.js + Tailwind CSS
             </span>
             <h2 className="mt-6 font-display text-4xl leading-[1.02] tracking-[-0.05em] text-white sm:text-5xl">
-              Uma seção construída para impressionar sem perder função.
+              Front-end orientado a clareza, manutenção e evolução contínua.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-primary-100/76 md:text-lg">
-              Em uma LP premium, um momento técnico bem colocado muda a percepção
-              da página inteira. Aqui o mockup vira palco para mostrar domínio de
-              `GSAP`, `Three.js` e composição visual trabalhando juntos.
+              Meu foco está na construção e manutenção de aplicações web com
+              interfaces responsivas, integrações com APIs REST e base técnica
+              preparada para evolução constante sem perder legibilidade.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -121,12 +121,12 @@ export function ShowcaseSection() {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <SpecularButton href="#contact">Quero uma seção assim</SpecularButton>
+            {/* <div className="mt-8 flex flex-wrap gap-4">
+              <SpecularButton href="#stack">Ver competências reais</SpecularButton>
               <SpecularButton href="#stack" variant="ghost">
                 Ver o processo por trás
               </SpecularButton>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative">
@@ -142,27 +142,7 @@ export function ShowcaseSection() {
                   </div>
                   <div className="relative h-[22rem] md:h-[30rem]">
                     <MacbookScene />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_28%),linear-gradient(180deg,rgba(13,6,24,0.06),rgba(5,1,11,0.2))]" />
-                    <div className="absolute left-4 top-12 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[0.68rem] uppercase tracking-[0.28em] text-primary-100/72 backdrop-blur-xl md:left-6">
-                      Showcase layer
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4 rounded-[1.4rem] border border-white/10 bg-black/28 p-4 backdrop-blur-xl md:bottom-6 md:left-6 md:right-6 md:p-5">
-                      <div className="flex flex-wrap items-center justify-between gap-4">
-                        <div>
-                          <p className="text-xs uppercase tracking-[0.28em] text-primary-100/46">
-                            Live composition
-                          </p>
-                          <p className="mt-2 font-display text-2xl tracking-[-0.04em] text-white md:text-3xl">
-                            MacBook mockup + 3D scene + scroll choreography
-                          </p>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          <TechPill>GSAP</TechPill>
-                          <TechPill>ScrollTrigger</TechPill>
-                          <TechPill>Three.js</TechPill>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,1,11,0.02),rgba(5,1,11,0.14))]" />
                   </div>
                 </div>
               </div>
@@ -175,13 +155,5 @@ export function ShowcaseSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-function TechPill({ children }: { children: string }) {
-  return (
-    <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[0.68rem] uppercase tracking-[0.22em] text-primary-100/78">
-      {children}
-    </span>
   );
 }

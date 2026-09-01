@@ -1,70 +1,70 @@
 export const featuredProjects = [
   {
-    id: 'premium-landing-pages',
-    title: 'Landing pages de alta conversão',
-    category: 'Acquisition / Launch',
-    year: '2025-2026',
+    id: 'rilix-frontend',
+    title: 'Rilix',
+    category: 'Desenvolvedor Front-End',
+    year: 'Jan 2026 - Ago 2026',
     summary:
-      'Páginas pensadas para transformar tráfego em conversa comercial, combinando direção visual, clareza de oferta e motion controlado.',
+      'Atuação no desenvolvimento e manutenção do sistema web da empresa, com foco em novas funcionalidades, migração de layouts e evolução contínua da interface.',
     problem:
-      'Marcas com boa oferta, mas páginas que pareciam genéricas, pouco memoráveis e fracas na percepção de valor.',
+      'O sistema precisava evoluir em usabilidade, clareza visual e estabilidade sem interromper a operação do produto.',
     outcome:
-      'Entregas com hero forte, narrativa mais convincente, CTA melhor contextualizado e presença visual suficiente para elevar a leitura da oferta.',
-    deliverables: ['Arquitetura da LP', 'Hero em motion', 'Sistema visual', 'CTA comercial'],
-    stack: ['React', 'Tailwind', 'GSAP', 'Framer Motion'],
+      'Entrega de melhorias contínuas no front-end, ajustes pontuais em backend, integração com APIs REST e implementação de testes automatizados.',
+    deliverables: ['Novas funcionalidades', 'Migração de layouts', 'Integrações REST', 'Testes automatizados'],
+    stack: ['React.js', 'Tailwind CSS', 'Vitest', 'APIs REST'],
     accent: 'from-fuchsia-500/35 via-violet-500/20 to-transparent',
-    panel: ['Hero impactante', 'Blocos autorais', 'Copy + direção', 'CTA orientado à ação'],
+    panel: ['Frontend web', 'Layouts modernos', 'Integrações', 'Estabilidade'],
     layout: 'feature',
   },
   {
-    id: 'internal-management',
-    title: 'Sistemas internos de gestão',
-    category: 'Operations / Admin',
-    year: '2024-2026',
+    id: 'lm-sistemas',
+    title: 'LM Sistemas',
+    category: 'Desenvolvedor Front-End',
+    year: '2021-2025',
     summary:
-      'Painéis administrativos e fluxos internos para operação diária, com foco em produtividade, legibilidade de dados e manutenção escalável.',
+      'Criação e manutenção de sistemas personalizados para diferentes necessidades de clientes, com ênfase em dashboards, formulários e telas administrativas.',
     problem:
-      'Operações espalhadas em telas confusas, rotinas manuais e módulos sem consistência entre gestão, notificações e permissões.',
+      'Projetos exigiam interfaces responsivas, integração de dados e base frontend organizada para suportar diferentes regras de negócio.',
     outcome:
-      'Interfaces mais claras para times operacionais, navegação mais previsível, componentes reutilizáveis e ganho de velocidade para evoluir novos módulos.',
-    deliverables: ['Dashboards internos', 'Módulos de notificações', 'Permissões e licenças', 'Fluxos operacionais'],
-    stack: ['React', 'TypeScript', 'Design System', 'APIs internas'],
+      'Entrega de dashboards, listagens, filtros e formulários com React.js, além de integração com APIs REST e foco em componentização.',
+    deliverables: ['Dashboards', 'Listagens e filtros', 'Telas administrativas', 'Integrações REST'],
+    stack: ['React.js', 'TypeScript', 'TanStack Query', 'React Hook Form'],
     accent: 'from-purple-500/35 via-pink-500/15 to-transparent',
-    panel: ['Dashboards', 'Licenças', 'Notificações', 'Fluxos internos'],
+    panel: ['Dashboards', 'Formulários', 'APIs', 'Componentes'],
     layout: 'vertical',
   },
   {
-    id: 'erp-financial',
-    title: 'ERP e módulos financeiros',
-    category: 'ERP / Backoffice',
-    year: '2024-2026',
+    id: 'thomson-reuters',
+    title: 'Thomson Reuters',
+    category: 'Técnico de Conteúdo e Treinamento',
+    year: '2019-2020',
     summary:
-      'Construção de módulos orientados a operação comercial e financeira, cobrindo cadastros, licenças, cobranças, devedores e visão administrativa.',
+      'Produção de conteúdos e treinamentos para clientes, com atuação próxima à experiência de uso e à comunicação entre suporte, produto e cliente.',
     problem:
-      'Rotinas críticas dependiam de telas densas, baixa hierarquia visual e pouca previsibilidade para times que precisavam operar rápido.',
+      'Era necessário explicar processos técnicos de forma clara e apoiar a adoção correta dos sistemas pelos usuários.',
     outcome:
-      'Módulos mais consistentes, leitura mais objetiva para dados críticos e estrutura frontend mais pronta para crescer sem virar legado cedo.',
-    deliverables: ['Módulos ERP', 'Cobrança e devedores', 'Gestão comercial', 'Frontend escalável'],
-    stack: ['React', 'TypeScript', 'Backoffice UI', 'Integração com dados'],
+      'Criação de materiais, vídeos e treinamentos, além de contribuição para melhorias contínuas na experiência dos usuários.',
+    deliverables: ['Treinamentos', 'Conteúdo técnico', 'Suporte ao usuário', 'Melhoria de experiência'],
+    stack: ['Comunicação', 'Treinamento', 'Suporte', 'Produto'],
     accent: 'from-violet-400/30 via-fuchsia-500/10 to-transparent',
-    panel: ['ERP core', 'Financeiro', 'Devedores', 'Admin'],
+    panel: ['Conteúdo', 'Treinamento', 'Cliente', 'Produto'],
     layout: 'horizontal',
   },
   {
-    id: 'n8n-automation',
-    title: 'Automações e integrações com n8n',
-    category: 'Automation / Workflow',
-    year: '2025-2026',
+    id: 'academic-foundation',
+    title: 'Formação em Sistemas de Informação',
+    category: 'ESUCRI',
+    year: '2018-2022',
     summary:
-      'Fluxos de automação para reduzir tarefas manuais, conectar sistemas e acelerar operações comerciais e internas.',
+      'Base acadêmica voltada a desenvolvimento de software, lógica, estrutura de sistemas e entendimento técnico para atuação em produtos web.',
     problem:
-      'Processos dependiam de repetição operacional, atualizações manuais e pouca integração entre plataformas, atendimento e backoffice.',
+      'Consolidar fundamentos de tecnologia e ampliar repertório para aplicação prática no desenvolvimento de sistemas.',
     outcome:
-      'Automação de rotinas, sincronização entre ferramentas, disparos condicionais e redução de atrito operacional em fluxos que precisavam rodar com confiabilidade.',
-    deliverables: ['Workflows n8n', 'Integrações entre sistemas', 'Disparos e webhooks', 'Automação operacional'],
-    stack: ['n8n', 'Webhooks', 'APIs', 'Integrações'],
+      'Formação concluída em Sistemas de Informação com aplicação direta em frontend, integração de sistemas e manutenção de produtos digitais.',
+    deliverables: ['Fundamentos de software', 'Lógica', 'Estrutura de sistemas', 'Base técnica'],
+    stack: ['Sistemas de Informação', 'Fundamentos', 'Produto', 'Desenvolvimento'],
     accent: 'from-cyan-400/20 via-fuchsia-500/14 to-transparent',
-    panel: ['Triggers', 'Pipelines', 'APIs', 'Ops'],
+    panel: ['Graduação', 'Fundamentos', 'Estrutura', 'Base'],
     layout: 'square',
   },
 ];
@@ -72,45 +72,45 @@ export const featuredProjects = [
 export const processSteps = [
   {
     id: '01',
-    title: 'Direction',
+    title: 'Levantamento',
     description:
-      'Defino o argumento da página, o que precisa ficar óbvio e quais objeções o layout precisa neutralizar.',
+      'Entendo a necessidade do negócio, o fluxo do usuário e o que a interface precisa resolver antes de começar a implementação.',
   },
   {
     id: '02',
     title: 'Interface',
     description:
-      'Traduzo posicionamento em hierarquia, composição, tipografia e textura para a página parecer construída, não montada.',
+      'Estruturo dashboards, formulários, filtros, listagens e telas administrativas com foco em responsividade, legibilidade e componentização.',
   },
   {
     id: '03',
-    title: 'Motion',
+    title: 'Integração',
     description:
-      'Uso transições para orientar leitura, intensificar foco e dar ritmo sem transformar a experiência em demo técnica.',
+      'Conecto o front-end a APIs REST, organizo rotas, formulários e estado assíncrono para sustentar fluxos reais de produto.',
   },
   {
     id: '04',
-    title: 'Build',
+    title: 'Qualidade',
     description:
-      'Entrego componentes limpos, responsivos e prontos para evoluir novas sections, casos e interações.',
+      'Aplico testes automatizados, corrijo bugs e faço ajustes pontuais quando necessário para manter estabilidade e evolução contínua.',
   },
 ];
 
 export const capabilityRows = [
   {
-    title: 'Frontend systems',
-    detail: 'React, TypeScript, componentização e estrutura para iterar rápido sem perder consistência.',
+    title: 'Frontend com React.js',
+    detail: 'React.js, JavaScript e TypeScript aplicados na construção e manutenção de aplicações web.',
   },
   {
-    title: 'Motion design',
-    detail: 'GSAP, Framer Motion e microinterações que reforçam narrativa e percepção de valor.',
+    title: 'Interfaces administrativas',
+    detail: 'Dashboards, formulários, filtros, listagens e telas responsivas com foco em clareza de uso.',
   },
   {
-    title: 'Premium landing pages',
-    detail: 'Heroes, sections de conversão, showcases e CTA com direção mais autoral e comercial.',
+    title: 'Integração com APIs REST',
+    detail: 'TanStack Query, React Hook Form e React Router para fluxos de dados, navegação e formulários.',
   },
   {
-    title: 'Interactive layers',
-    detail: '3D, efeitos de profundidade, superfícies responsivas e momentos de destaque sem excesso.',
+    title: 'Qualidade e manutenção',
+    detail: 'Vitest, Testing Library, Docker, Git e GitHub para dar suporte à estabilidade e evolução do sistema.',
   },
 ];

@@ -1,34 +1,33 @@
 import { motion } from 'framer-motion';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { OrbitalSphereBackground } from '@/components/ui/orbital-sphere';
-import SplitFlapText from '@/components/ui/split-flap-text';
 
 const metrics = [
-  { value: 'Front', label: 'interfaces refinadas com foco em produto e conversão' },
-  { value: 'Motion', label: 'animação, ritmo visual e interação com propósito' },
-  { value: '3D', label: 'cenas e experiências para elevar percepção de valor' },
+  { value: '5+', label: 'anos de experiência com construção e manutenção de aplicações web' },
+  { value: 'React', label: 'interfaces responsivas, componentizadas e orientadas a produto' },
+  { value: 'APIs', label: 'integração REST, estado assíncrono e evolução contínua de sistemas' },
 ];
 
 const cards = [
   {
-    title: 'Product-Led UI',
+    title: 'Interfaces administrativas',
     description:
-      'Projetos guiados por clareza de oferta, hierarquia de conteúdo e leitura rápida de valor.',
+      'Desenvolvimento de dashboards, formulários, filtros, listagens e telas administrativas com foco em usabilidade.',
   },
   {
-    title: 'Motion Systems',
+    title: 'Integrações REST',
     description:
-      'GSAP, Framer Motion e transições desenhadas para criar ritmo sem distrair da mensagem.',
+      'Conexão de aplicações a APIs REST com organização de dados, rotas e formulários para fluxos reais de produto.',
   },
   {
-    title: 'Frontend Engineering',
+    title: 'Testes e manutenção',
     description:
-      'Código modular, componentização limpa e base pronta para evoluir features densas com controle.',
+      'Correção de bugs, testes com Vitest e evolução contínua do sistema com atenção à estabilidade.',
   },
   {
-    title: 'Interactive Layers',
+    title: 'Treinamento e comunicação',
     description:
-      '3D, efeitos visuais e superfícies digitais usados como parte da narrativa, não como ornamento.',
+      'Experiência em conteúdos técnicos, materiais explicativos e comunicação entre cliente, suporte e produto.',
   },
 ];
 
@@ -46,7 +45,7 @@ export function HeroSection() {
               className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium tracking-[0.18em] text-primary-200 backdrop-blur-xl"
             >
               <span className="size-2 rounded-full bg-primary-400 shadow-[0_0_18px_rgba(192,132,252,0.95)]" />
-              DEVELOPER CASE STUDY
+              PORTFOLIO PROFISSIONAL
             </motion.div>
 
             <div className="mx-auto max-w-5xl space-y-6">
@@ -54,11 +53,11 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 26 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.95, delay: 0.08, ease: 'easeOut' }}
-                className="font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-white sm:text-5xl md:text-6xl lg:text-[4.85rem] xl:text-[5.15rem]"
+                className="font-display text-4xl font-semibold leading-[1.03] tracking-[-0.05em] text-white sm:text-5xl md:text-6xl lg:text-[4.85rem] xl:text-[5.15rem]"
               >
-                Creative developer
-                <span className="mt-1 block bg-[linear-gradient(180deg,#f6e9ff_0%,#dba6ff_42%,#8a05be_100%)] bg-clip-text text-transparent">
-                  para experiências web
+                Desenvolvedor Front-End
+                <span className="mt-1 block pb-[0.08em] bg-[linear-gradient(180deg,#f6e9ff_0%,#dba6ff_42%,#8a05be_100%)] bg-clip-text text-transparent">
+                  para sistemas web em evolução contínua
                 </span>
               </motion.h1>
 
@@ -68,9 +67,10 @@ export function HeroSection() {
                 transition={{ duration: 0.95, delay: 0.16, ease: 'easeOut' }}
                 className="mx-auto max-w-3xl text-base leading-7 text-primary-100/80 sm:text-lg md:text-xl"
               >
-                Este portfólio mostra como eu transformo estratégia, interface
-                e implementação em experiências digitais com presença visual,
-                performance e intenção comercial.
+                Desenvolvedor Front-End com mais de 5 anos de experiência na construção
+                de aplicações web com React.js e Tailwind CSS, atuando com novas
+                funcionalidades, integração com APIs REST, migração de layouts,
+                ajustes pontuais em backend e testes automatizados.
               </motion.p>
 
             </div>
@@ -85,13 +85,13 @@ export function HeroSection() {
                 href="#case-study"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-primary-500 px-6 text-sm font-semibold text-white transition duration-300 hover:bg-primary-400"
               >
-                Ver projetos e estudos
+                Ver experiência e stack
               </a>
               <a
                 href="#stack"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 text-sm font-semibold text-white/90 backdrop-blur-xl transition duration-300 hover:border-primary-300/60 hover:bg-white/10"
               >
-                Explorar processo
+                Explorar competências
               </a>
             </motion.div>
           </div>
@@ -111,22 +111,22 @@ function HeroPreview() {
 
       <div className="absolute left-8 top-8 flex items-center gap-3 rounded-full border border-white/10 bg-black/20 px-4 py-2 text-[0.7rem] uppercase tracking-[0.34em] text-primary-100/65 backdrop-blur-xl">
         <span className="size-2 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(74,222,128,0.85)]" />
-        Portfolio Preview
+        Resumo profissional
       </div>
 
       <div className="grid h-full grid-cols-1 gap-5 p-5 md:grid-cols-[1.12fr_0.88fr] md:p-7">
         <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-md md:p-6">
           <div className="flex items-center justify-between text-[0.72rem] uppercase tracking-[0.32em] text-primary-100/50">
-            <span>Selected Capabilities</span>
-            <span>Portfolio / 2026</span>
+            <span>Competências principais</span>
+            <span>Perfil / 2026</span>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2.5">
-            <Tag>React</Tag>
-            <Tag>Tailwind</Tag>
-            <Tag>GSAP</Tag>
-            <Tag>Three.js</Tag>
-            <Tag>Case Studies</Tag>
+            <Tag>React.js</Tag>
+            <Tag>TypeScript</Tag>
+            <Tag>Tailwind CSS</Tag>
+            <Tag>APIs REST</Tag>
+            <Tag>Vitest</Tag>
           </div>
 
           <div className="mt-6 grid gap-3 md:grid-cols-2">
@@ -155,22 +155,22 @@ function HeroPreview() {
           <div className="mt-4 grid gap-3 md:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-[1.5rem] border border-primary-300/20 bg-[linear-gradient(180deg,rgba(168,85,247,0.12),rgba(64,16,99,0.08))] p-4 md:p-5">
               <p className="text-xs uppercase tracking-[0.28em] text-primary-100/45">
-                What This Portfolio Shows
+                O que este portfólio mostra
               </p>
               <p className="mt-3 text-base font-medium leading-7 text-white md:text-lg md:leading-8">
-                Produto, landing pages, interfaces ricas em motion, blocos
-                interativos e implementação frontend feita para impressionar sem
-                perder clareza.
+                Desenvolvimento de interfaces administrativas, integração com
+                APIs REST, migração de layouts legados e manutenção contínua de
+                sistemas web com foco em clareza e estabilidade.
               </p>
             </div>
 
             <div className="rounded-[1.5rem] border border-white/10 bg-black/20 p-4 md:p-5">
               <p className="text-xs uppercase tracking-[0.28em] text-primary-100/45">
-                Positioning
+                Posicionamento
               </p>
               <p className="mt-3 text-sm leading-6 text-primary-100/75 md:leading-7">
-                Desenvolvedor focado em experiências web premium, narrativa
-                visual e execução técnica ponta a ponta.
+                Desenvolvedor front-end focado em responsividade,
+                componentização, usabilidade e evolução contínua de produto.
               </p>
             </div>
           </div>
@@ -206,12 +206,12 @@ function HeroPreview() {
           >
             <div className="absolute inset-x-6 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.6),transparent)]" />
             <p className="text-xs uppercase tracking-[0.28em] text-primary-100/50">
-              Approach
+              Abordagem
             </p>
             <p className="mt-4 text-base leading-7 text-white/90 md:text-lg md:leading-8">
-              Unir estratégia, craft visual e frontend moderno para criar
-              interfaces que comunicam valor antes mesmo da primeira explicação
-              longa.
+              Unir clareza de interface, integração com APIs e manutenção
+              contínua para entregar sistemas mais estáveis, responsivos e
+              fáceis de evoluir.
             </p>
           </motion.div>
         </div>

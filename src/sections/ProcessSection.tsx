@@ -4,10 +4,10 @@ import { InteractiveTechPanel } from '@/components/ui/interactive-tech-panel';
 import { processSteps } from '@/data/portfolio';
 
 const layerLabels = [
-  'Strategic layer',
-  'Visual system',
-  'Interaction layer',
-  'Engineering layer',
+  'Entendimento',
+  'Construção de interface',
+  'Fluxo de dados',
+  'Estabilidade',
 ];
 
 export function ProcessSection() {
@@ -30,7 +30,7 @@ export function ProcessSection() {
     <section
       ref={sectionRef}
       id="stack"
-      className="relative overflow-x-clip px-4 py-24 md:px-8 md:py-32"
+      className="relative overflow-x-clip px-4 pb-24 pt-0 md:px-8 md:pb-32 md:pt-0"
     >
       <div className="pointer-events-none absolute inset-x-0 top-24 h-[36rem] bg-[radial-gradient(circle_at_30%_20%,rgba(138,5,190,0.18),transparent_36%),radial-gradient(circle_at_80%_30%,rgba(191,109,245,0.12),transparent_28%)]" />
 
@@ -41,17 +41,17 @@ export function ProcessSection() {
             className="lg:sticky lg:top-24 lg:self-start"
           >
             <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-primary-200">
-              How I build
+              Como eu trabalho
             </span>
 
             <h2 className="mt-6 font-display text-4xl leading-[1.02] tracking-[-0.05em] text-white sm:text-5xl md:text-[3.65rem]">
-              Processo com impacto visual, ritmo e controle técnico.
+              Processo orientado a produto, manutenção e evolução contínua.
             </h2>
 
             <p className="mt-5 max-w-xl text-base leading-8 text-primary-100/75 md:text-lg">
-              Não é uma sequência de tarefas. É uma progressão visual e técnica
-              que transforma uma landing page comum em um ativo com presença,
-              clareza e percepção premium.
+              Meu processo parte do entendimento da necessidade e segue até a
+              entrega com integração, testes e manutenção. O foco aqui é fazer
+              a interface funcionar bem hoje e continuar evoluindo amanhã.
             </p>
 
             <div className="relative mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 backdrop-blur-xl md:p-7">
@@ -64,23 +64,23 @@ export function ProcessSection() {
               <div className="relative z-10 flex items-center justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.28em] text-primary-100/45">
-                    Live build map
+                    Mapa de entrega
                   </p>
                   <p className="mt-2 font-display text-2xl tracking-[-0.04em] text-white">
-                    Direction to delivery
+                    Do requisito à produção
                   </p>
                 </div>
                 <div className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[0.68rem] uppercase tracking-[0.24em] text-primary-100/72">
-                  4 layers
+                  4 frentes
                 </div>
               </div>
 
               <InteractiveTechPanel />
 
               <div className="mt-6 grid grid-cols-3 gap-3">
-                <Metric label="Motion-led" value="Scroll" />
-                <Metric label="Visual tone" value="Premium" />
-                <Metric label="Build focus" value="Modular" />
+                <Metric label="Stack base" value="React" />
+                <Metric label="Foco UI" value="Clareza" />
+                <Metric label="Entrega" value="Modular" />
               </div>
             </div>
           </motion.div>
@@ -145,21 +145,21 @@ function ProcessCard({
           <div className="mt-5 flex flex-wrap gap-2">
             <StepPill>
               {index === 0
-                ? 'Offer clarity'
+                ? 'Requisito'
                 : index === 1
-                  ? 'Visual hierarchy'
+                  ? 'Responsividade'
                   : index === 2
-                    ? 'Scroll rhythm'
-                    : 'Ship quality'}
+                    ? 'APIs REST'
+                    : 'Testes'}
             </StepPill>
             <StepPill>
               {index === 0
-                ? 'Client intent'
+                ? 'Entendimento'
                 : index === 1
-                  ? 'Premium cues'
+                  ? 'Componentização'
                   : index === 2
-                    ? 'Interactive polish'
-                    : 'Reusable code'}
+                    ? 'Estado assíncrono'
+                    : 'Correções'}
             </StepPill>
           </div>
         </div>

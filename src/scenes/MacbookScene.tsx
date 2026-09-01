@@ -22,53 +22,51 @@ export function MacbookScene() {
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
-    const ambientLight = new THREE.AmbientLight(0xf4d5ff, 1.3);
+    const ambientLight = new THREE.AmbientLight(0xf4d5ff, 1.1);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xbf6df5, 16, 30, 2);
-    pointLight.position.set(3, 2, 6);
+    const pointLight = new THREE.PointLight(0xbf6df5, 22, 30, 2);
+    pointLight.position.set(3.5, 2.5, 6);
     scene.add(pointLight);
 
-    const rimLight = new THREE.PointLight(0x5eead4, 8, 24, 2);
-    rimLight.position.set(-4, -2, 4);
+    const rimLight = new THREE.PointLight(0x5eead4, 10, 24, 2);
+    rimLight.position.set(-4, -1.5, 4);
     scene.add(rimLight);
 
     const group = new THREE.Group();
+    group.rotation.x = -0.18;
     scene.add(group);
 
-    const coreGeometry = new THREE.TorusKnotGeometry(1.15, 0.32, 220, 32);
-    const coreMaterial = new THREE.MeshPhysicalMaterial({
-      color: 0x8a05be,
+    const ringGeometry = new THREE.TorusGeometry(1.55, 0.08, 24, 120);
+    const ringMaterial = new THREE.MeshPhysicalMaterial({
+      color: 0xa855f7,
       emissive: 0x5b1694,
-      emissiveIntensity: 0.8,
-      roughness: 0.18,
-      metalness: 0.7,
+      emissiveIntensity: 0.75,
+      roughness: 0.16,
+      metalness: 0.78,
       clearcoat: 1,
       clearcoatRoughness: 0.08,
     });
+    const rings = [0, Math.PI / 3, (Math.PI * 2) / 3].map((rotation) => {
+      const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+      ring.scale.set(1.36, 0.58, 1);
+      ring.rotation.z = rotation;
+      group.add(ring);
+      return ring;
+    });
+
+    const coreGeometry = new THREE.SphereGeometry(0.36, 48, 48);
+    const coreMaterial = new THREE.MeshPhysicalMaterial({
+      color: 0xf3e4ff,
+      emissive: 0xbf6df5,
+      emissiveIntensity: 1.5,
+      roughness: 0.08,
+      metalness: 0.25,
+      clearcoat: 1,
+    });
     const core = new THREE.Mesh(coreGeometry, coreMaterial);
+    core.position.z = 0.18;
     group.add(core);
-
-    const haloGeometry = new THREE.TorusGeometry(2.4, 0.045, 32, 220);
-    const haloMaterial = new THREE.MeshBasicMaterial({
-      color: 0xd39cfb,
-      transparent: true,
-      opacity: 0.65,
-    });
-    const halo = new THREE.Mesh(haloGeometry, haloMaterial);
-    halo.rotation.x = Math.PI / 2.25;
-    group.add(halo);
-
-    const orbitGeometry = new THREE.TorusGeometry(1.8, 0.028, 20, 180);
-    const orbitMaterial = new THREE.MeshBasicMaterial({
-      color: 0x8ef7ff,
-      transparent: true,
-      opacity: 0.35,
-    });
-    const orbit = new THREE.Mesh(orbitGeometry, orbitMaterial);
-    orbit.rotation.x = Math.PI / 1.8;
-    orbit.rotation.y = Math.PI / 5;
-    group.add(orbit);
 
     const particlesCount = 900;
     const particlePositions = new Float32Array(particlesCount * 3);
@@ -97,17 +95,6 @@ export function MacbookScene() {
     });
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
     group.add(particles);
-
-    const glowPlane = new THREE.Mesh(
-      new THREE.PlaneGeometry(8, 8),
-      new THREE.MeshBasicMaterial({
-        color: 0x56067a,
-        transparent: true,
-        opacity: 0.12,
-      })
-    );
-    glowPlane.position.z = -3.5;
-    scene.add(glowPlane);
 
     let animationFrame = 0;
     let width = 0;
@@ -142,15 +129,17 @@ export function MacbookScene() {
       currentX += (targetX - currentX) * 0.045;
       currentY += (targetY - currentY) * 0.045;
 
-      core.rotation.x = time * 0.00035 + currentY;
-      core.rotation.y = time * 0.0006 + currentX;
-      halo.rotation.z = time * 0.00026;
-      orbit.rotation.z = -time * 0.00042;
+      rings.forEach((ring, index) => {
+        ring.rotation.z = index * (Math.PI / 3) + time * 0.00014 * (index % 2 ? -1 : 1);
+        ring.rotation.x = Math.sin(time * 0.00045 + index) * 0.08;
+      });
+      core.position.z = 0.18 + Math.sin(time * 0.0012) * 0.08;
+      core.scale.setScalar(1 + Math.sin(time * 0.0012) * 0.06);
       particles.rotation.y = time * 0.00009;
       particles.rotation.x = currentY * 0.35;
 
-      group.rotation.y = currentX * 0.65;
-      group.rotation.x = currentY * 0.45;
+      group.rotation.y = time * 0.00018 + currentX * 0.65;
+      group.rotation.x = -0.18 + currentY * 0.45;
 
       renderer.render(scene, camera);
     };
@@ -167,16 +156,12 @@ export function MacbookScene() {
       container.removeEventListener('pointermove', handlePointerMove);
       container.removeEventListener('pointerleave', handlePointerLeave);
 
+      ringGeometry.dispose();
+      ringMaterial.dispose();
       coreGeometry.dispose();
       coreMaterial.dispose();
-      haloGeometry.dispose();
-      haloMaterial.dispose();
-      orbitGeometry.dispose();
-      orbitMaterial.dispose();
       particlesGeometry.dispose();
       particlesMaterial.dispose();
-      glowPlane.geometry.dispose();
-      (glowPlane.material as THREE.Material).dispose();
       renderer.dispose();
       container.removeChild(renderer.domElement);
     };

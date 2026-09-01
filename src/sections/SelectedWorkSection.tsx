@@ -3,45 +3,45 @@ import ScrollStack, { ScrollStackItem } from '@/components/ui/scroll-stack';
 
 const projectTypes = [
   {
-    eyebrow: 'Acquisition / Launch',
-    title: 'Landing pages',
-    body: 'Páginas pensadas para converter com hero forte, narrativa comercial e direção visual autoral.',
-    meta: '01',
+    eyebrow: 'Desenvolvedor Front-End',
+    title: 'Rilix',
+    body: 'Atuação no desenvolvimento e manutenção do sistema web da empresa, com novas funcionalidades, migração de layouts legados e integração com APIs REST.',
+    meta: '2026',
   },
   {
-    eyebrow: 'Automation / Workflow',
-    title: 'Automação n8n',
-    body: 'Fluxos para integrar ferramentas, reduzir tarefas manuais e acelerar operação comercial.',
-    meta: '02',
+    eyebrow: 'Desenvolvedor Front-End',
+    title: 'LM Sistemas',
+    body: 'Criação e manutenção de sistemas personalizados com dashboards, formulários, listagens, filtros e telas administrativas para diferentes necessidades de clientes.',
+    meta: '2021-2025',
   },
   {
-    eyebrow: 'ERP / Backoffice',
-    title: 'ERPs',
-    body: 'Módulos administrativos e financeiros para operações densas, com leitura mais clara e escalável.',
-    meta: '03',
+    eyebrow: 'Técnico de Conteúdo e Treinamento',
+    title: 'Thomson Reuters',
+    body: 'Produção de conteúdos, vídeos e materiais explicativos, além de treinamentos e apoio à melhoria contínua da experiência dos usuários.',
+    meta: '2019-2020',
   },
   {
-    eyebrow: 'Sales / Operations',
-    title: 'Sistemas para vendas',
-    body: 'Estruturas internas para times comerciais, gestão de rotina e processos de acompanhamento.',
-    meta: '04',
+    eyebrow: 'Stack principal',
+    title: 'Competências',
+    body: 'React.js, JavaScript, TypeScript, Tailwind CSS, TanStack Query, React Hook Form, React Router, Vitest, Testing Library, Docker, Git e GitHub.',
+    meta: 'Stack',
   },
   {
-    eyebrow: 'Interactive / Frontend',
-    title: 'Experiências com motion',
-    body: 'Interfaces com movimento, interações ricas e presença premium para elevar percepção de valor.',
-    meta: '05',
+    eyebrow: 'Sistemas de Informação · ESUCRI',
+    title: 'Formação',
+    body: 'Graduação concluída em 2022, consolidando base técnica para atuação em desenvolvimento de software e sistemas web.',
+    meta: '2018-2022',
   },
 ];
 
 export function SelectedWorkSection() {
   return (
-    <section id="case-study" className="relative px-4 py-20 md:px-8 md:py-28">
+    <section id="case-study" className="relative px-4 pb-0 pt-20 md:px-8 md:pb-0 md:pt-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Project types"
-          title="Tipos de projeto apresentados em um stack mais fiel ao componente."
-          description="Troquei para a estrutura baseada no prompt novo do `ScrollStack`, com foco em leitura mais limpa e cards sólidos."
+          eyebrow="Experiência aplicada"
+          title="Trajetória profissional e base técnica apresentadas do jeito certo."
+          description="Esta seção resume onde atuei, quais entregas realizei e quais competências sustentam meu trabalho como desenvolvedor front-end."
         />
 
         <motion.div
@@ -90,13 +90,13 @@ export function SelectedWorkSection() {
 
                     <div className="flex flex-wrap gap-2">
                       <span className="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-[0.66rem] uppercase tracking-[0.2em] text-primary-100/80">
-                        produto
-                      </span>
-                      <span className="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-[0.66rem] uppercase tracking-[0.2em] text-primary-100/80">
                         frontend
                       </span>
                       <span className="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-[0.66rem] uppercase tracking-[0.2em] text-primary-100/80">
-                        execução
+                        integração
+                      </span>
+                      <span className="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-[0.66rem] uppercase tracking-[0.2em] text-primary-100/80">
+                        manutenção
                       </span>
                     </div>
                   </div>

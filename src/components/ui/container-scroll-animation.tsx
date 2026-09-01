@@ -32,14 +32,14 @@ export function ContainerScroll({
   return (
     <div
       ref={containerRef}
-      className="relative flex min-h-[90rem] items-start justify-center overflow-x-clip px-4 pb-20 pt-14 md:min-h-[104rem] md:px-8 md:pb-28 md:pt-18"
+      className="relative flex items-start justify-center overflow-x-clip px-4 pb-0 pt-10 md:min-h-[82rem] md:px-8 md:pb-0 md:pt-14"
     >
       <div
-        className="relative w-full max-w-7xl py-8 md:py-24"
+        className="relative w-full max-w-7xl py-6 md:py-12"
         style={{ perspective: '1200px' }}
       >
-        <Header translate={translate} titleComponent={titleComponent} />
-        <Card rotate={rotate} scale={scale}>
+        <Header translate={isMobile ? 0 : translate} titleComponent={titleComponent} />
+        <Card rotate={isMobile ? 0 : rotate} scale={isMobile ? 1 : scale}>
           {children}
         </Card>
       </div>
@@ -48,7 +48,7 @@ export function ContainerScroll({
 }
 
 type HeaderProps = {
-  translate: MotionValue<number>;
+  translate: MotionValue<number> | number;
   titleComponent: React.ReactNode;
 };
 
@@ -64,8 +64,8 @@ function Header({ translate, titleComponent }: HeaderProps) {
 }
 
 type CardProps = {
-  rotate: MotionValue<number>;
-  scale: MotionValue<number>;
+  rotate: MotionValue<number> | number;
+  scale: MotionValue<number> | number;
   children: React.ReactNode;
 };
 
@@ -78,7 +78,7 @@ function Card({ rotate, scale, children }: CardProps) {
         boxShadow:
           '0 24px 70px rgba(99, 7, 128, 0.25), 0 72px 160px rgba(12, 1, 24, 0.58)',
       }}
-      className="relative mx-auto mt-2 h-[34rem] w-full max-w-6xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(32,6,51,0.96),rgba(12,2,20,0.98))] p-2 shadow-2xl md:mt-4 md:h-[48rem] md:rounded-[2.5rem] md:p-4"
+      className="relative mx-auto mt-2 min-h-[75rem] w-full max-w-6xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(32,6,51,0.96),rgba(12,2,20,0.98))] p-2 shadow-2xl md:mt-4 md:min-h-[60rem] md:rounded-[2.5rem] md:p-4"
     >
       <div className="relative h-full w-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.22),transparent_30%),linear-gradient(180deg,rgba(18,6,30,0.97),rgba(8,3,16,0.99))]">
         {children}

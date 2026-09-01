@@ -1,8 +1,10 @@
 import TextLoop from '@/components/ui/text-loop';
 
-export function SectionLoopDivider() {
+export function SectionLoopDivider({ className = '' }: { className?: string }) {
   return (
-    <div className="relative w-full overflow-hidden py-0.5 md:py-1 mt-0 mb-0">
+    <div
+      className={`relative z-20 w-full overflow-hidden py-0 leading-none ${className}`.trim()}
+    >
       <TextLoop
         text="Landing Pages ✦ Automação n8n ✦ ERPs ✦ Sistemas para vendas ✦ Motion systems"
         shape="line"

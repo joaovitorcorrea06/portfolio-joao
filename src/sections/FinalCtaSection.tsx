@@ -9,11 +9,11 @@ import SplitFlapText from '@/components/ui/split-flap-text';
 
 const orbitTags = [
   { label: 'React', className: 'left-[8%] top-[18%]' },
-  { label: 'GSAP', className: 'right-[10%] top-[15%]' },
-  { label: 'Three.js', className: 'left-[10%] bottom-[20%]' },
-  { label: 'Motion', className: 'right-[8%] bottom-[16%]' },
-  { label: 'Conversion', className: 'left-[24%] top-[8%]' },
-  { label: 'Premium UI', className: 'right-[24%] bottom-[8%]' },
+  { label: 'TypeScript', className: 'right-[10%] top-[15%]' },
+  { label: 'APIs REST', className: 'left-[10%] bottom-[20%]' },
+  { label: 'Vitest', className: 'right-[8%] bottom-[16%]' },
+  { label: 'Tailwind', className: 'left-[24%] top-[8%]' },
+  { label: 'GitHub', className: 'right-[24%] bottom-[8%]' },
 ];
 
 export function FinalCtaSection() {
@@ -103,13 +103,13 @@ export function FinalCtaSection() {
                 <div className="relative z-10">
                   <div className="final-cta-reveal">
                     <span className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs uppercase tracking-[0.28em] text-primary-100/88 backdrop-blur-md">
-                      Final CTA
+                      Contato
                     </span>
                   </div>
 
                   <div className="final-cta-reveal mt-6 flex justify-center">
                     <SplitFlapText
-                      words={['BUILD', 'IMPACT', 'CLICK', 'LAUNCH']}
+                      words={['REACT', 'APIS', 'TESTES', 'BUILD']}
                       flipDuration={0.08}
                       stagger={0.03}
                       cycleDelay={1600}
@@ -125,34 +125,51 @@ export function FinalCtaSection() {
                   </div>
 
                   <h2 className="final-cta-reveal mt-8 font-display text-4xl leading-[0.94] tracking-[-0.07em] text-white sm:text-5xl md:text-7xl">
-                    Vamos construir uma página
+                    Vamos construir interfaces web
                     <span className="block bg-[linear-gradient(180deg,#f8f1ff_10%,#d39cfb_58%,#8a05be_100%)] bg-clip-text text-transparent">
-                      impossível de ignorar.
+                      claras, estáveis e fáceis de evoluir.
                     </span>
                   </h2>
 
                   <p className="final-cta-reveal mx-auto mt-6 max-w-2xl text-base leading-8 text-primary-100/80 md:text-lg">
-                    Estratégia, visual, motion, frontend e camadas interativas pensadas
-                    para fazer o cliente parar, explorar e clicar.
+                    Atuo com React.js, TypeScript, Tailwind CSS, APIs REST,
+                    testes automatizados e manutenção contínua para sustentar
+                    sistemas web em operação.
                   </p>
 
-                  <div className="final-cta-reveal mt-10 flex flex-wrap items-center justify-center gap-4">
+                  <div className="final-cta-reveal mt-10 grid gap-4 md:grid-cols-3">
                     <OrbitBorderGlow duration={4.2} glowColor="191, 109, 245" className="rounded-full">
                       <SpecularButton
-                        href="#contact"
-                        className="min-w-[17rem] px-8 py-4 text-base shadow-[0_18px_48px_rgba(138,5,190,0.45)]"
+                        href="https://wa.me/5548996259001?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full px-6 py-4 text-base shadow-[0_18px_48px_rgba(138,5,190,0.45)]"
                       >
-                        Quero um projeto nesse nível
+                        WhatsApp
                       </SpecularButton>
                     </OrbitBorderGlow>
 
                     <OrbitBorderGlow duration={6.1} glowColor="125, 211, 252" className="rounded-full">
                       <SpecularButton
-                        href="#case-study"
+                        href="https://www.instagram.com/joaovitorcorrea/"
+                        target="_blank"
+                        rel="noreferrer"
                         variant="ghost"
-                        className="min-w-[16rem] px-8 py-4 text-base"
+                        className="w-full px-6 py-4 text-base"
                       >
-                        Rever cases e interações
+                        Instagram
+                      </SpecularButton>
+                    </OrbitBorderGlow>
+
+                    <OrbitBorderGlow duration={5.3} glowColor="216, 180, 254" className="rounded-full">
+                      <SpecularButton
+                        href="https://www.linkedin.com/in/jo%C3%A3o-vitor-corr%C3%AAa-a442b3179/"
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="ghost"
+                        className="w-full px-6 py-4 text-base"
+                      >
+                        LinkedIn
                       </SpecularButton>
                     </OrbitBorderGlow>
                   </div>
@@ -160,9 +177,9 @@ export function FinalCtaSection() {
               </div>
 
               <div className="final-cta-reveal mt-10 grid gap-4 md:grid-cols-3">
-                <SignalTile title="LPs premium" description="com presença comercial real" />
-                <SignalTile title="Motion systems" description="para dirigir leitura e foco" />
-                <SignalTile title="3D + automação" description="para impressionar sem virar gimmick" />
+                <SignalTile title="React.js e TypeScript" description="para construção e manutenção de interfaces" />
+                <SignalTile title="APIs REST e formulários" description="para fluxos reais de produto" />
+                <SignalTile title="Vitest, Docker e Git" description="para estabilidade e evolução contínua" />
               </div>
             </div>
           </motion.div>
